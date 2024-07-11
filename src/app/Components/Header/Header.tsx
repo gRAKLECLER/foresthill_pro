@@ -10,9 +10,9 @@ const Header = () => {
             </Link>
             <ul className="header_links">
                 <Link href={'/'}>ACCUEIL</Link>
-                <Link href={'/contremarques'}>CONTREMARQUES (CRÉATION ET LISTE)</Link>
-                <Link href={'/actualites'}>ACTUALITES</Link>
-                <Link href={'/contact'}>CONTACT</Link>
+                <Link href={'/Contremarques'}>CONTREMARQUES (CRÉATION ET LISTE)</Link>
+                <Link href={'/Actualites'}>ACTUALITES</Link>
+                <Link href={'/Contact'}>CONTACT</Link>
             </ul>
         </header>
     )

@@ -1,0 +1,32 @@
+.headContent {
+    background-color: #00a9a1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 55px;
+    line-height: 55px;
+    margin: 0;
+    padding: 0 33px;
+    border: 1px solid #00a9a1;
+    font-size: 13px;
+    font-weight: 900;
+    font-family: inherit;
+    text-align: left;
+    color: #fff;
+    background-color: #00a9a1;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    font-style: normal;
+    text-transform: uppercase;
+    text-shadow: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
