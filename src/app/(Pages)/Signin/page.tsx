@@ -1,7 +1,7 @@
 // pages/auth/signin.tsx
 "use client"
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.css'
 import Link from 'next/link';
 
@@ -10,9 +10,16 @@ export default function SignIn() {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
-    const user = sessionStorage.getItem('user')
+    const [parsedUser, setParsedUser] = useState<any>(null);
 
-    const parsedUser = JSON.parse(user ?? '')
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const user = sessionStorage.getItem('user');
+            if (user) {
+                setParsedUser(JSON.parse(user));
+            }
+        }
+    }, []);
   
     const handleLogin = (event: React.FormEvent) => {
       event.preventDefault();
