@@ -5,33 +5,22 @@ import { useState } from 'react';
 import '../../(Auth)/style.css'
 import Link from 'next/link';
 
-export default function SignIn() {
+export default function SignUp() {
     const router = useRouter();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-
-    const user = sessionStorage.getItem('user')
-
-    const parsedUser = JSON.parse(user ?? '')
   
-    const handleLogin = (event: React.FormEvent) => {
+    const handleRegister = (event: React.FormEvent) => {
       event.preventDefault();
-      
-      
-      if (email === parsedUser?.email && password === parsedUser?.password) {
-        
-        sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('user', JSON.stringify({email: email, password: password}))
+      router.push('/Signin')
 
-        router.push('/List');
-      } else {
-        alert('Identifiants incorrects');
-      }
     };
 
   return (
     <main style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <form onSubmit={handleLogin} className='form'>
-            <h2>Connectez-vous</h2>
+        <form onSubmit={handleRegister} className='form'>
+            <h2>Enregistrez-vous</h2>
             <div className='form_input'>
                 <label htmlFor="email">Email :</label>
                 <input
@@ -52,8 +41,8 @@ export default function SignIn() {
                 onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
-            <button className='form_button' type="submit">Se connecter</button>
-            <Link href={'/Signup'}>S'inscrire</Link>
+            <button className='form_button' type="submit">S'inscrire</button>
+            <Link href={'/Signin'}>Se connecter</Link>
         </form>
     </main>
   );

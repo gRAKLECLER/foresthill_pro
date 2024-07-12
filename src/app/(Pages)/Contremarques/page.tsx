@@ -2,12 +2,16 @@
 import Link from 'next/link'
 import './style.css'
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 
 const ContremarquesPage = () => {
 
     const router = useRouter();
     
+    useEffect(() => {
+        sessionStorage.setItem('user', '{}')
+    }, [])
 
 
     const handleCLick = () => {

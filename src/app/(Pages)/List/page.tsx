@@ -6,15 +6,16 @@ const ListPage = () => {
     const router = useRouter()
 
     const handleLogout = () => {
-        router.push('/Signin')
+        router.push('/Signup')
         sessionStorage.removeItem('isLoggedIn')
+        sessionStorage.setItem('user', '{}')
     }
 
   return (
-        <main style={{ minHeight: '80vh' }}>
+    <main style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1rem' }}>
         <h1>List Page</h1>
-        <button onClick={handleLogout}>Logout</button>
-        </main>
+        <button className='button' onClick={handleLogout}>Logout</button>
+      </main>
   );
 };
 
