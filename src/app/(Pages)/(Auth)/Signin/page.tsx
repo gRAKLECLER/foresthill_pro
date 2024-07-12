@@ -53,7 +53,7 @@ export default function SignIn() {
                 />
             </div>
             <button className='form_button' type="submit">Se connecter</button>
-            <Link href={'/Signup'}>S'inscrire</Link>
+            <Link href={'/Signup'}>Inscrivez-vous</Link>
         </form>
     </main>
   );
