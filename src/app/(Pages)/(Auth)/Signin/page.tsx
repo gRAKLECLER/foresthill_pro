@@ -10,13 +10,10 @@ export default function SignIn() {
     const [password, setPassword] = useState<string>('');
   
     const handleLogin = (event: React.FormEvent) => {
-      // Vous devez ajouter une logique d'authentification ici
       event.preventDefault();
-      console.log(email, password);
       
       if (email === 'toto@forest-hill.com' && password === '1234') {
-    //     sessionStorage.setItem('isLoggedIn', 'true');
-    //   console.log(email, password);
+    sessionStorage.setItem('isLoggedIn', 'true');
 
         router.push('/List');
       } else {

@@ -1,7 +1,24 @@
+'use client'
 import Link from 'next/link'
 import './style.css'
+import { useRouter } from 'next/navigation';
+
 
 const ContremarquesPage = () => {
+
+    const router = useRouter();
+    
+
+
+    const handleCLick = () => {
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn')
+        if(isLoggedIn === 'true'){
+            router.push('/List')
+        }else {
+            router.push('/Signin')
+        }
+    }
+
     return (
         <section style={{ minHeight: '100vh' }}>
             <div className="headContent">
@@ -16,7 +33,7 @@ const ContremarquesPage = () => {
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
-                <Link href={'/Signin'} className='button'>Connectez-vous</Link>
+                <button className='button' onClick={handleCLick}>Connectez-vous</button>
             </div>
         </section>
     )
