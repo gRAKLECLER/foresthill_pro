@@ -2,7 +2,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import '../../(Auth)/style.css'
+import '../Signin/style.css'
 import Link from 'next/link';
 
 export default function SignIn() {
