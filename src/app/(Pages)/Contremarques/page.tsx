@@ -3,7 +3,7 @@ import './style.css'
 
 const ContremarquesPage = () => {
     return (
-        <>
+        <section style={{ minHeight: '100vh' }}>
             <div className="headContent">
                 <h1>
                     <span>Contremarques (Création et Liste)</span>
@@ -16,9 +16,9 @@ const ContremarquesPage = () => {
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
-                <Link href={'/Connect'} className='button'>Connectez-vous</Link>
+                <Link href={'/Signin'} className='button'>Connectez-vous</Link>
             </div>
-        </>
+        </section>
     )
 }
 

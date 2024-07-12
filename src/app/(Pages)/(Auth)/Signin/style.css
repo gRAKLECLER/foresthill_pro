@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgb(242, 242, 242);
+    padding: 2rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input > input {
+    border: none;
+    border-bottom: 1px solid #00a9a1;
+    width: 200px;
+    margin-top: 20px;
+    padding: .6rem;
+    border-radius: 4px;
+}
+
+.form_input > input:focus-visible {
+    outline: none;
+}
+
+.form_button {
+    border: none;
+    padding: .6rem;
+    background-color: #00a9a1;
+    color: #fff;
+    border-radius: 4px;
+    width: 100px;
+}

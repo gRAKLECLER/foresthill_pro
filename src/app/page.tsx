@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main >
+    <main style={{ minHeight: '80vh' }}>
       <div style={{ background: '#00a9a1', width: '100%', textAlign: 'center', padding: "28px", color: '#ffff', fontSize: '20px' }}>
         <h4 className={styles.title}> Les fonctionnalités de votre Espace Pro</h4>
       </div>
